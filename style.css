@@ -1,1 +1,108 @@
-/* Add your CSS here */
+/* Display all cards in a row */
+section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 20px;
+	justify-content: flex-start;
+	align-items: flex-start;
+	overflow-x: auto;
+	padding-bottom: 20px;
+	width: 100%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+/* Hide card paragraph by default */
+.card-desc {
+	display: none;
+}
+/* Hide card paragraph by default, show on hover */
+.img-hover:hover .card-desc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: rgba(175, 203, 226, 0.95);
+	color: #222;
+	position: absolute;
+	width: 250px;   /* Match image width */
+	height: 180px;  /* Match image height */
+	left: 0;
+	top: 0;
+	z-index: 10;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Match card-border shadow */
+}
+
+/* Remove card movement and tilt on hover */
+.card-border:hover {
+  /* No transform, card stays in place */
+}
+
+.img-hover {
+	position: relative;
+	display: inline-block;
+}
+
+/* Timeline container: scrolls horizontally with cards and scroll text */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scroll */
+  scroll-behavior: smooth;
+}
+
+/* Center the scroll instruction above the timeline cards */
+.timeline-container > p {
+  text-align: center;
+  font-size: 1.1em;
+  margin: 18px 0 8px 0;
+  min-width: 600px; /* Keeps text visible while scrolling */
+}
+
+/* White border around h2, h3, and image in each card */
+.card-border {
+	background: white;
+	border: 4px solid white;
+	border-radius: 10px;
+	padding: 16px 8px 12px 8px;
+	margin-bottom: 12px;
+  width: 250px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	
+}
+body {
+	background-color: #d5d5d5; /* Light grey background */
+  font-family: Arial, Helvetica, sans-serif; /* Use a simple, readable font */
+}
+/* Make the header section blue and add space above and below */
+header {
+	background-color: #0071c5; /* Intel blue */
+	color: white;
+	padding: 50px 0 40px 0; /* Added top padding for space above header */
+	text-align: center; /* Center header content */
+}
+/* Intel logo in upper right corner */
+/* Intel logo in header, centered and large */
+.logo-header {
+	display: block;
+	margin: 0 auto 20px auto;
+	width: 300px;
+	height: auto;
+}
+/* Make all card images the same size */
+.card-img {
+	width: 250px; /* All images will be 250px wide */
+	height: 180px; /* All images will be 180px tall */
+	object-fit: cover; /* Crop images to fit nicely */
+	display: block;
+	margin-bottom: 10px;
+	border: 4px solid white; /* White border around images - smaller */
+	
+}
+
+/* Center any text inside this container */
+.center-text {
+  text-align: center;
+}
+}
