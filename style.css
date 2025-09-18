@@ -33,10 +33,7 @@ section {
 	box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Match card-border shadow */
 }
 
-/* Remove card movement and tilt on hover */
-.card-border:hover {
-  /* No transform, card stays in place */
-}
+
 
 .img-hover {
 	position: relative;
