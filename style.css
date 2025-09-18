@@ -105,4 +105,27 @@ header {
 .center-text {
   text-align: center;
 }
+
+/* Responsive: Stack cards vertically on small screens */
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+    overflow-x: unset;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .card-border {
+    width: 90vw; /* Make cards fill most of the screen width */
+    max-width: 350px;
+  }
+  .card-img,
+  .img-hover:hover .card-desc {
+    width: 90vw;
+    max-width: 350px;
+    height: 180px;
+  }
 }
